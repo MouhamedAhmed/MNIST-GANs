@@ -58,14 +58,17 @@ Here are the plots of loss function after 20 epochs of training
 
 
 -`linear-bn`
+
 ![Alt text](plots/linear-bn-epoch-mean-losses.png?raw=true "Title")
 
 
 -`cnn-bn`
+
 ![Alt text](plots/cnn-bn-epoch-mean-losses.png?raw=true "Title")
 
 
 -`cnn-sn`
+
 ![Alt text](plots/cnn-sn-epoch-mean-losses.png?raw=true "Title")
 
 
