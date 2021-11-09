@@ -49,7 +49,7 @@ python main.py --architecture cnn-bn --batch_size 32 -lr 0.00001 -epochs 20
 python main.py --architecture cnn-sn --batch_size 32 -lr 0.00001 -epochs 20
 ```
 
-## Results
+## Results (Losses Plots)
 Here are the plots of loss function after 20 epochs of training
 
 -`linear`
@@ -70,6 +70,90 @@ Here are the plots of loss function after 20 epochs of training
 -`cnn-sn`
 
 ![Alt text](plots/cnn-sn-epoch-mean-losses.png?raw=true "Title")
+
+
+## Results (Visual Validation)
+Here are the outputs after 5, 10, 15 and 20 epochs. You can find the samples after each 500 steps in `<model>-result-samples` folders.
+
+- `linear`
+
+1. 5 epochs
+
+![Alt text](linear-result-samples/fake-9500.png?raw=true "Title")
+
+2. 10 epochs
+
+![Alt text](linear-result-samples/fake-19000.png?raw=true "Title")
+
+3. 15 epochs
+
+![Alt text](linear-result-samples/fake-28500.png?raw=true "Title")
+
+4. 20 epochs
+
+![Alt text](linear-result-samples/fake-37000.png?raw=true "Title")
+
+
+
+- `linear-bn`
+
+1. 5 epochs
+
+![Alt text](linear-bn-result-samples/fake-9500.png?raw=true "Title")
+
+2. 10 epochs
+
+![Alt text](linear-bn-result-samples/fake-19000.png?raw=true "Title")
+
+3. 15 epochs
+
+![Alt text](linear-bn-result-samples/fake-28500.png?raw=true "Title")
+
+4. 20 epochs
+
+![Alt text](linear-bn-result-samples/fake-37000.png?raw=true "Title")
+
+
+
+- `cnn-bn`
+
+1. 5 epochs
+
+![Alt text](cnn-bn-result-samples/fake-9500.png?raw=true "Title")
+
+2. 10 epochs
+
+![Alt text](cnn-bn-result-samples/fake-19000.png?raw=true "Title")
+
+3. 15 epochs
+
+![Alt text](cnn-bn-result-samples/fake-28500.png?raw=true "Title")
+
+4. 20 epochs
+
+![Alt text](cnn-bn-result-samples/fake-37000.png?raw=true "Title")
+
+
+
+
+- `cnn-sn`
+
+1. 5 epochs
+
+![Alt text](cnn-sn-result-samples/fake-9500.png?raw=true "Title")
+
+2. 10 epochs
+
+![Alt text](cnn-sn-result-samples/fake-19000.png?raw=true "Title")
+
+3. 15 epochs
+
+![Alt text](cnn-sn-result-samples/fake-28500.png?raw=true "Title")
+
+4. 20 epochs
+
+![Alt text](cnn-sn-result-samples/fake-37000.png?raw=true "Title")
+
 
 
 
