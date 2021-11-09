@@ -51,7 +51,7 @@ class Trainer():
         
         else:
             self.dataloader = DataLoader(
-                MNIST('.', download=False, transform=transforms.ToTensor()),
+                MNIST('.', download=True, transform=transforms.ToTensor()),
                 batch_size=self.batch_size,
                 shuffle=True)
 
