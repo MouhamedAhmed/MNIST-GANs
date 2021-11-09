@@ -37,17 +37,23 @@ class Trainer():
 
         # dataset
         # Load MNIST dataset as tensors
-        self.dataloader = DataLoader(
-            MNIST(root='.', download=True,
-                       transform=transforms.Compose([
-                           transforms.Resize(28),
-                           transforms.ToTensor(),
-                           transforms.Normalize((0.5,), (0.5,)),
-                       ])),
+        if self.architecture == 'cnn-bn':
+            self.dataloader = DataLoader(
+                MNIST(root='.', download=True,
+                        transform=transforms.Compose([
+                            transforms.Resize(28),
+                            transforms.ToTensor(),
+                            transforms.Normalize((0.5,), (0.5,)),
+                        ])),
 
-            batch_size=self.batch_size,
-            shuffle=True)
+                batch_size=self.batch_size,
+                shuffle=True)
         
+        else:
+            self.dataloader = DataLoader(
+                MNIST('.', download=False, transform=transforms.ToTensor()),
+                batch_size=self.batch_size,
+                shuffle=True)
 
         # optimizer
         self.gen_opt = torch.optim.Adam(self.generator.parameters(), lr=self.lr)
@@ -66,9 +72,8 @@ class Trainer():
         os.mkdir(self.architecture + '-result-samples')
         
         # 
-        if os.path.exists('plots'):
-            shutil.rmtree('plots')
-        os.mkdir('plots')
+        if not os.path.exists('plots'):
+            os.mkdir('plots')
 
         
     def show_tensor_images(self, image_tensor, img_name, num_images=25, size=(1, 28, 28)):
