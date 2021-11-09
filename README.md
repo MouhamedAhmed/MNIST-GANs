@@ -50,7 +50,7 @@ python main.py --architecture cnn-sn --batch_size 32 -lr 0.00001 -epochs 20
 ```
 
 ## Results (Losses Plots)
-Here are the plots of loss function after 20 epochs of training
+Here are the plots of loss function after 20 epochs of training, where `blue` is for `Discriminator` and `red` is for `Generator`.
 
 -`linear`
 
