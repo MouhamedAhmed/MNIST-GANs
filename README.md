@@ -48,3 +48,8 @@ python main.py --architecture cnn-bn --batch_size 32 -lr 0.00001 -epochs 20
 ```bash
 python main.py --architecture cnn-sn --batch_size 32 -lr 0.00001 -epochs 20
 ```
+
+## Results
+Here are the plots of loss function after 20 epochs of training
+-`linear`
+![Alt text](plots/linear-epoch-mean-losses.png?raw=true "Title")
